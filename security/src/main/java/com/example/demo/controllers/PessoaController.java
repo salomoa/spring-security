@@ -12,16 +12,16 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
-@RequestMapping(path = "/pessoas")
 @RestController
+@RequestMapping(path = "/pessoas")
 public class PessoaController {
 
     @Autowired
     private PessoaService pessoaService;
 
     @GetMapping
-    public ResponseEntity<List<PessoaModel>> buscarTodosOsPessoas(){
-        List<PessoaModel> requisicao = pessoaService.buscarTodosPessoas();
+    public ResponseEntity<List<PessoaModel>> buscarTodasAsPessoas(){
+        List<PessoaModel> requisicao = pessoaService.buscarTodasPessoas();
         return ResponseEntity.ok().body(requisicao);
     }
 

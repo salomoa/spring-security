@@ -14,7 +14,7 @@ public class PessoaService {
     @Autowired
     private PessoaRepository pessoaRepository;
 
-    public List<PessoaModel> buscarTodosPessoas() { return pessoaRepository.findAll(); }
+    public List<PessoaModel> buscarTodasPessoas() { return pessoaRepository.findAll(); }
 
     public PessoaModel criarPessoa(PessoaModel pessoaModel) { return pessoaRepository.save(pessoaModel); }
 
